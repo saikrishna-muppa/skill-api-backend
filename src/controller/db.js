@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 
-// const MONGODBURI="mongodb+srv://root:<password>@cluster0.yx0gr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const MONGODBURI = "mongodb://localhost/skilllibetryapi";
+const MONGODBURI="mongodb+srv://skill:skill@onlineshopping.jm8uf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// const MONGODBURI = "mongodb://localhost/skill";
 
 const InitiateMongoServer = async () => {
+  
   try {
     await mongoose.connect(MONGODBURI, {
       useNewUrlParser: true,

@@ -1,18 +1,16 @@
 const express = require("express");
 const { check, validationResult } = require("express-validator");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 
 const User = require("../model/User");
-const { db } = require("../model/User");
+// const { db } = require("../model/User");
 
 router.post(
   "/signup",
   [
-    // check("username","please enter a valid username")
-    // .not()
-    // .isEmpty(),
+   
     check("email", "please enter a valid email").isEmail(),
     check("password", "please enter a valid password")
   ],
@@ -105,3 +103,4 @@ router.post(
     }
   }
 );
+module.exports = router;
