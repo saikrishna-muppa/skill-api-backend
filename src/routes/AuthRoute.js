@@ -7,6 +7,10 @@ const router = express.Router();
 const User = require("../model/User");
 // const { db } = require("../model/User");
 
+router.get("/user",function(req,res){
+  res.json("hello use")
+})
+
 router.post(
   "/signup",
   [
